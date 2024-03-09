@@ -53,3 +53,5 @@ def visualize(f_func, range_start, range_end , x_list , plt_title):
 
 # Call the main function
 trail1()
+
+
