@@ -40,8 +40,8 @@ def min_max_scaler(data, feature_range=(0, 1)):
     # Perform Min-Max scaling
     scaled_data = (data - min_vals) / (max_vals - min_vals)
 
-    # Scale to the specified feature range
-    scaled_data = scaled_data * (feature_range[1] - feature_range[0]) + feature_range[0]
+    # # Scale to the specified feature range
+    # scaled_data = scaled_data * (feature_range[1] - feature_range[0]) + feature_range[0]
 
     return scaled_data
 
