@@ -11,10 +11,6 @@ data2 = np.array([[10, 25, 37],
                  [42, 55, 68],
                  [75, 600, 1000]])
 
-# Print original data
-print("Original data:")
-print(data2)
-
 # Initialize MinMaxScaler
 scaler = MinMaxScaler()
 
@@ -32,9 +28,9 @@ print(scaled_data2)
 
 ######################################  From Scratch #######################################
 
-def min_max_scaler(data, feature_range=(0, 1)):
+def min_max_scaler(data):
     # Calculate the minimum and maximum values for each feature
-    min_vals = np.min(data, axis=0)
+    min_vals = np.min(data, axis=0)  #axis=0 => refers to the vertical axis, where each column is considered a separate array.
     max_vals = np.max(data, axis=0)
 
     # Perform Min-Max scaling
@@ -48,7 +44,7 @@ def min_max_scaler(data, feature_range=(0, 1)):
 # Sample data
 data3 = np.array([[10, 25, 37],
                  [42, 55, 68],
-                 [75, 600, 1000]])
+                 [75, 80, 90]])
 
 # Perform Min-Max scaling
 scaled_data3 = min_max_scaler(data3)
