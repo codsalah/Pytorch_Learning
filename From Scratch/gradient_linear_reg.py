@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib.pyplot as plt
 
 # Initialize parameters
 x = np.random.randn(10,1)
@@ -38,3 +39,13 @@ for epoch in range(500):
     yhat = w * x + b
     loss = np.mean((y - yhat) ** 2)  # Calculate mean squared error (MSE)
     print(f"{epoch} loss is {loss}, ")
+
+
+
+plt.scatter(x, y, label='Data points')
+plt.plot(x, yhat, color='red', label='Regression line')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Linear Regression with Gradient Descent')
+plt.legend()
+plt.show()
